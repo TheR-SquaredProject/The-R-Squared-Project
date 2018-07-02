@@ -10,7 +10,24 @@ $(document).ready(function(){
 			scrollSpeed: 800,
 		});
 	});
-	//$('textarea').autoResize();
+
+
+	//automatically resizing textarea
+	var resizingTextareas = [].slice.call(document.querySelectorAll('textarea[autoresize]'));
+
+	resizingTextareas.forEach(function(textarea) {
+	  textarea.addEventListener('input', autoresize, false);
+	});
+
+	function autoresize() {
+	  this.style.height = 'auto';
+	  this.style.height = this.scrollHeight+'px';
+	  this.scrollTop = this.scrollHeight;
+	  window.scrollTo(window.scrollLeft,(this.scrollTop + this.scrollHeight));
+	}
+
+
+	//change content according to the form name hovered on
 	var formOptions =  $('.form-option');
 	$('.form-option').hover(function(){
 		console.log(this);
@@ -31,6 +48,8 @@ $(document).ready(function(){
 	})
 
 
+
+	//check for the scroll even and add or remove the 'nav-container-fixed' class when scrolled past a certain point
 	function checkScroll(){
 		console.log("called");
 		if(document.body.scrollTop >= $('.land').height()){
@@ -40,7 +59,7 @@ $(document).ready(function(){
 			$('.nav-container').removeClass('nav-container-fixed');
 		}
 	}
-	document.Onscroll = checkScroll();
+	document.Onscroll = checkScroll(); 		//it gets called only once when the page is loaded and never gets called later when scrolled.
 
 //	var j = jQuery.noConflict();
 //    j( function() {

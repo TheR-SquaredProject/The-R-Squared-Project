@@ -6,6 +6,9 @@ html,body
     padding: 0px;
     overflow-x: hidden;
 }
+a, a:hover{
+	text-decoration: none;
+}
 .first .row > div{
   background: #FFFFFF;
   border: 1px solid black;
@@ -16,6 +19,7 @@ html,body
 .show{
 	display: block;
 }
+
 
 /*navbar start */
 .nav-container{
@@ -56,6 +60,9 @@ html,body
 }
 
 
+.nav-item:hover{
+	font-weight: 600;
+}
 .nav-links{
 	padding-right: 4em;
 }
@@ -82,7 +89,7 @@ html,body
 	overflow: hidden;
 	/border: 1em solid black;
 	/display: none;
-	height: auto;
+	height: 100vh;
 	padding: 0;
 }
 /*
@@ -251,7 +258,7 @@ html,body
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background: #CDDC39
+	background: #CDDC39;
 }
 .form-container > .wrapper{
 	height: 100vh;
@@ -283,10 +290,10 @@ html,body
 	position: relative;
 }
 .actual-form-content-wrapper{
-	overflow-y: hidden;
 	position: relative;
 }
 .actual-form-content{
+	height: 20em;
 	position: relative;
 	display: flex;
 	overflow-x: hidden;
@@ -304,7 +311,7 @@ html,body
 	left: 100%;
 	position: absolute;
 	/background-color: rgba(0,0,0,.5);
-	transition: .5s ease-in-out;
+	transition: .5s ease-out;
 }
 .go-left{
 	transform: translateX(-100%);
@@ -338,9 +345,19 @@ html,body
 	background: transparent;
 	border-bottom: 2px solid black;
 }
+.form-input:focus,.form-input:active:focus,.form-input.active:focus,
+.form-input.focus,.form-input:active.focus,.form-input.active.focus {
+    outline: none;
+	box-shadow: none;
+}
 .form-input:placeholder-shown{
 	font-family: Roboto;
 	padding-left: .4em;
+}
+div[autoresize] {
+	font-family: roboto;
+  	height: auto;
+	padding: .5vw;
 }
 .form-submit-button{
 	background: rgba(21,21,21,.1);
