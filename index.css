@@ -6,6 +6,10 @@ html,body
     padding: 0px;
     overflow-x: hidden;
 }
+html{
+	display: flex;
+	flex-direction: column;
+}
 a, a:hover{
 	text-decoration: none;
 }
@@ -74,11 +78,14 @@ a, a:hover{
 	padding-right: 2em;
 }
 .nav-links > button{
-	background: rgb(224,224,224);
+	background: rgba(224,224,224,.8);
 	font-size: 1.2vw;
 	padding: .6em;
 	padding-left: 1.8vw;
 	padding-right: 1.8vw;
+}
+.nav-links > button:hover{
+	background: rgba(224,224,224, 1);
 }
 
 /*navbar end*/
