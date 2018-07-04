@@ -1,0 +1,387 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+a, a:hover{
+	text-decoration: none;
+}
+.first .row > div{
+  background: #FFFFFF;
+  border: 1px solid black;
+}
+.hide{
+	display: none;
+}
+.show{
+	display: block;
+}
+
+
+/*navbar start */
+.nav-container{
+	z-index: 2;
+	display: flex;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+	position: absolute;
+	width: 100vw;
+	color: aliceblue;			/*color of everything in the nav is aliceblue */
+	background: linear-gradient(to bottom, rgba(21,21,21,.4), rgba(21,21,21,.3), rgba(21,21,21,.2),rgba(21,21,21,0));
+	/min-height: 5em;
+	/border: 1px solid white;
+	/position: fixed;
+}
+@keyframes nav-container-fixed{
+	0%{
+		margin-top: -100%;;
+	}
+	100%{ margin-top: 0;}
+}
+.nav-container-fixed{
+	position: fixed;
+	background: rgba(21,21,21,1);
+	animation-name: nav-container-fixed;
+	animation-duration: .5s;
+}
+
+
+.nav-logo{
+	width: 16%;
+	padding-left: 2em;
+}
+.nav-logo > .logo-text{
+	font-family: pacifico;
+	font-size: 2vw;
+	color: aliceblue;
+}
+
+
+.nav-item:hover{
+	font-weight: 600;
+}
+.nav-links{
+	padding-right: 4em;
+}
+.nav-links > .nav-item{
+	font-family: Roboto;
+	font-size: 1.2vw;
+	color: aliceblue;
+	padding: 1em;
+	padding-right: 2em;
+}
+.nav-links > button{
+	background: rgb(224,224,224);
+	font-size: 1.2vw;
+	padding: .6em;
+	padding-left: 1.8vw;
+	padding-right: 1.8vw;
+}
+
+/*navbar end*/
+
+
+.land{
+	position: relative;
+	overflow: hidden;
+	/border: 1em solid black;
+	/display: none;
+	height: 100vh;
+	padding: 0;
+}
+/*
+.land-cover-img{
+	position: relative;
+	height: auto;
+	z-index: -1;
+}*/
+.land-cover-img {
+  z-index: -1;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  min-height: 100%;
+  min-width: 100%;
+}
+@media (max-width: 400px){
+	.land-cover-img{
+		padding: 0;
+		/position: absolute;
+		z-index: -1;
+		/width: 200%;
+		/left: 15%;
+	}
+}
+
+
+.land-content{
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	font-family: roboto;
+	position: absolute;
+	top: 37%;
+}
+.headline{
+	font-family: 'Patua One', cursive;
+	padding: 1.2vw;
+	font-size: 3.1vw;
+}
+.details{
+	padding-bottom: 2vw;
+	font-size: 1.8vw;
+}
+.land-content > .land-text{
+	text-align: center;
+	color: aliceblue;
+}
+.land-content > .land-button{
+	background-color: rgba(255,255,255,.7);
+	margin-top: 1vw;
+	padding: 1vw;
+	padding-left: 1.8em;
+	padding-right: 1.8em;
+	align-self: center;
+	font-size: 1.7vw;
+	transition: .3s;
+}
+.land-button:hover{
+	background: rgba(255,255,255,.3);
+	border: 2px solid rgba(21,21,21,.8);
+}
+
+/*************************  land page ends  ***********************************/
+
+
+.about-us-container{
+	/display: none;
+	display: flex;
+	height: 100vh;
+	background: #69F0AE;
+	justify-content: center;
+}
+.about-us-content{
+	align-self: center;
+}
+.about-us-headline{
+	position: relative;
+	justify-content: center;
+	font-family: 'Patua One', cursive;
+	text-align: center;
+	font-size: 4.1vw;
+}
+.about-us-headline::after{
+	content: '';
+	position: absolute;
+	background: black;
+	top: 100%;
+	left: 0;
+	width: 38%;
+	height: .1em;
+	left: calc(50% - 3.2em);
+	border-radius: 7em;
+}
+.about-us-text{
+	margin-top: 1em;
+	font-size: 2vw;
+	font-family: roboto;
+}
+
+/******************* about us end *************************/
+
+
+/******************* what we do   **************************/
+
+.what-we-do-container{
+	background: #E0E0E0;
+	height: 100vh;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+.what-we-do-headline-container{
+	position: relative;
+	padding-top: 2.5em;
+}
+.what-we-do-headline{
+	position: relative;
+	text-align: center;
+	padding: 1vw;
+}
+.what-we-do-headline::after{
+	content: '';
+	position: absolute;
+	background: black;
+	top: 100%;
+	left: 0;
+	width: 57%;
+	height: .1em;
+	left: calc(50% - 3.5em);
+	border-radius: 7em;
+}
+
+
+.what-we-do-content{
+	margin-top: 2vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.what-we-do-content  .card-img-top{
+	height: 18vw;
+	padding: 3vw;
+	padding-bottom: 0;
+	padding-top: 2vw;
+	margin: 0;
+}
+
+.what-we-do-content .card{
+	background: rgba(255,255,255,0.35);
+	min-width: 2vw;
+	margin: 2em;
+	padding-top: 0;
+}
+
+.what-we-do-content .card-link{
+	align-content: space-around;
+}
+
+
+/***************** what we do part end *************/
+
+/*****************      form part      **************/
+
+.form-container{
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #CDDC39;
+}
+.form-container > .wrapper{
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.choose-form-container{
+	display: flex;
+	justify-content: center;
+	/border: 1px solid black;
+	height: 6vw;
+	position: relative;
+}
+.form-content{
+	/height: 50vh;
+	position: relative;
+	padding-left: 0;
+	padding-right: 0;
+	overflow-x: hidden;
+}
+.form-option{
+	font-family: roboto;
+	font-size: 1.3vw;
+	font-weight: 600;
+	padding-left: .7em;
+	padding-right: .7em;
+	position: relative;
+}
+.actual-form-content-wrapper{
+	position: relative;
+}
+.actual-form-content{
+	height: 20em;
+	position: relative;
+	display: flex;
+	overflow-x: hidden;
+}
+.contact-us-form{
+	width: 100%;
+	position: relative;
+	transition: .5s ease-in-out;
+	/left: -50%;
+	/transform: translateY(-50%);
+}
+.be-a-volunteer-form{
+	width: 100%;
+	/opacity: 0;
+	left: 100%;
+	position: absolute;
+	/background-color: rgba(0,0,0,.5);
+	transition: .5s ease-out;
+}
+.go-left{
+	transform: translateX(-100%);
+}
+.be-a-volunteer-fade-in{
+	left: 0%;
+}
+.form-arrow{
+	position: absolute;
+	transform: rotate(180deg);
+	width: 1.2vw;
+	height: auto;
+	top: 38%;
+	transition: .3s;
+	cursor: pointer;
+}
+.arrow-left{
+	left: 35%;
+}
+.arrow-right{
+	left: 58%;
+}
+
+
+.form-group > label{
+	font-family: roboto;
+	font-size: 1.2vw;
+}
+.form-group > .form-input{
+	border: none;
+	background: transparent;
+	border-bottom: 2px solid black;
+}
+.form-input:focus,.form-input:active:focus,.form-input.active:focus,
+.form-input.focus,.form-input:active.focus,.form-input.active.focus {
+    outline: none;
+	box-shadow: none;
+}
+.form-input:placeholder-shown{
+	font-family: Roboto;
+	padding-left: .4em;
+}
+div[autoresize] {
+	font-family: roboto;
+  	height: auto;
+	padding: .5vw;
+}
+.form-submit-button{
+	background: rgba(21,21,21,.1);
+	border: 0px;
+	transition: background .2s;
+}
+.form-submit-button:hover{
+	border: .5px solid rgba(21,21,21,.3);
+	background: rgba(21,21,21,.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
