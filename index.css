@@ -23,6 +23,11 @@ a, a:hover{
 .show{
 	display: block;
 }
+.horizontal-ruler{
+	width: 100vw;
+	height: 1.5vw;
+	background: #212121;
+}
 
 
 /*navbar start */
