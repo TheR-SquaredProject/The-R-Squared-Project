@@ -3,13 +3,13 @@ function scrollSection(){
 }
 
 $(document).ready(function(){
-	$(function() {
+	/*$(function() {
 		$.scrollify({
 			section : ".scrollify",
 			//scrollbars: false,
 			scrollSpeed: 800,
 		});
-	});
+	});*/
 
 
 	//automatically resizing textarea
@@ -55,7 +55,7 @@ $(document).ready(function(){
 		if(document.body.scrollTop >= $('.land').height()){
 			$('.nav-container').addClass('nav-container-fixed');
 		}else{
-			console.log("g");
+			//console.log("g");
 			$('.nav-container').removeClass('nav-container-fixed');
 		}
 	}
